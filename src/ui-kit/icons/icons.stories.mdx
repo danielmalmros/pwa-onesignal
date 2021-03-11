@@ -1,0 +1,26 @@
+import {
+  Meta,
+  IconGallery,
+  IconItem,
+  Canvas,
+  Source,
+} from '@storybook/addon-docs/blocks';
+
+<Meta
+  title="Styles/Icons"
+  argTypes={{
+    color: { control: { type: 'color' } },
+  }}
+/>
+
+# Icons
+
+An Icon is a piece of an visual element, but we must ensure its accessibility while using it. It can have 2 purposes:
+
+- **Decorative only:** for example, it illustrates a label next to it. We must ensure that it is ignored by screen readers, by setting aria-hidden attribute `<ui-kit-icon :icon="'alert-triangle'" aria-hidden></ui-kit-icon>`
+
+- **Non-decorative:** it means that it delivers information. For example, an icon as only child in a button. The meaning can be obvious visually, but it must have a proper text alternative via aria-label for screen readers. `<ui-kit-icon :icon="'alert-triangle'" aria-label="Print this document"></ui-kit-icon>`
+
+## Usage
+
+Insert the icon like this: `<ui-kit-icon :icon="'alert-triangle'"></ui-kit-icon>`.

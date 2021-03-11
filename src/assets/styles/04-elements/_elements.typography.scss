@@ -1,0 +1,93 @@
+/* Single property */
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 14px;
+$max_font: 16px;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-weight: $normal-weight;
+  line-height: $line-height;
+  margin: 0;
+  margin-bottom: $space-sm;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* Headings */
+
+$mod_1: 1.2; // mobile
+$mod_2: 1.5; // desktop
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: $black-weight;
+  margin: 0 0 $space-md 0;
+  font-size: $mod_1 * $mod_1 * $mod_1 * $mod_1 * 1rem;
+  @include fluid-type(
+    $min_width,
+    $max_width,
+    $mod_1 * $mod_1 * $mod_1 * $min_font,
+    $mod_2 * $mod_2 * $mod_2 * $min_font
+  );
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: $bold-weight;
+  margin: $space-sm 0 $space-md 0;
+  font-size: $mod_1 * $mod_1 * $mod_1 * 1rem;
+  @include fluid-type(
+    $min_width,
+    $max_width,
+    $mod_1 * $mod_1 * $mod_1 * $min_font,
+    $mod_2 * $mod_2 * $mod_2 * $min_font
+  );
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: $bold-weight;
+  margin: $space-sm 0 $space-md 0;
+  font-size: $mod_1 * $mod_1 * 1rem;
+  @include fluid-type(
+    $min_width,
+    $max_width,
+    $mod_1 * $mod_1 * $min_font,
+    $mod_2 * $mod_2 * $min_font
+  );
+}
+
+h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: $bold-weight;
+  margin: $space-xs 0 $space-sm 0;
+}
+
+h5 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: $bold-weight;
+  margin: $space-xs 0 $space-sm 0;
+}
+
+h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: $bold-weight;
+  margin: $space-xs 0 $space-sm 0;
+}

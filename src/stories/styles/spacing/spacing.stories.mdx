@@ -1,0 +1,62 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="Styles/Spacing" />
+
+export const spacings = [
+    {
+        variable: '$space-xxxs',
+        value: '4'
+    },
+    {
+        variable: '$space-xxs',
+        value: '6'
+    },
+    {
+        variable: '$space-xs',
+        value: '8'
+    },
+    {
+        variable: '$space-sm',
+        value: '12'
+    },
+    {
+        variable: '$space-md',
+        value: '20'
+    },
+    {
+        variable: '$space-lg',
+        value: '32'
+    },
+    {
+        variable: '$space-xl',
+        value: '52'
+    },
+    {
+        variable: '$space-xxl',
+        value: '84'
+    },
+    {
+        variable: '$space-xxxl',
+        value: '136'
+    },
+];
+
+# Spacing
+How to use description here...
+
+## Spacing variables
+
+<div>
+{spacings.map((s,i) =>(
+<div key={i}>
+    <p style={{margin: '0'}}>Variable: {s.variable}</p>
+    <p style={{margin: '0'}}>Value: {s.value}{s.value !== "0" && s.value !== "auto" ? 'px' : ''}</p>
+    <Canvas>
+    <div style={{display: 'inline-block',width: '100%', backgroundColor: '#f6f9fc'}}>
+        <div style={{height: '100px', width: s.value + 'px', backgroundColor: '#1e2022'}}></div>
+    </div>
+    </Canvas>
+</div>
+))}
+</div>
